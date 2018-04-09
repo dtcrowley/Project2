@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
-    var PokeImg = sequelize.define('images', {
-        img: { 
+    var images = sequelize.define('images', {
+        img: {
             type: DataTypes.STRING,
             allowNull: false,
           },
@@ -8,5 +8,6 @@ module.exports = function(sequelize, DataTypes) {
     }, {
         timestamp: false
     });
-    return PokeImg;
+
+    return images
 }
