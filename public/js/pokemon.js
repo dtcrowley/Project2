@@ -1,11 +1,11 @@
 // Initialize Firebase
 var config = {
-    apiKey: "AIzaSyAlny4lMf5WEg_jYCZME2HHP1gbkzuP0KQ",
-    authDomain: "pokedex-user-auth.firebaseapp.com",
-    databaseURL: "https://pokedex-user-auth.firebaseio.com",
-    projectId: "pokedex-user-auth",
-    storageBucket: "pokedex-user-auth.appspot.com",
-    messagingSenderId: "38189101021"
+    apiKey: "AIzaSyDJ8sRVZ5WBZ6RK8tT__eZ81ZMJfsilONM",
+    authDomain: "pokemon-cf1a6.firebaseapp.com",
+    databaseURL: "https://pokemon-cf1a6.firebaseio.com",
+    projectId: "pokemon-cf1a6",
+    storageBucket: "pokemon-cf1a6.appspot.com",
+    messagingSenderId: "645564358111"
 };
 firebase.initializeApp(config);
 
