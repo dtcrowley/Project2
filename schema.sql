@@ -18,3 +18,9 @@ CREATE TABLE pokemonStats (
     Legendary BOOLEAN NOT NULL,
     PRIMARY KEY (id)
 );
+
+CREATE TABLE images (
+    id INTEGER (10) NOT NULL AUTO_INCREMENT,
+    Img VARCHAR (100) NOT NULL,
+    PRIMARY KEY (id)
+);
