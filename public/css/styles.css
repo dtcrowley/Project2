@@ -1,0 +1,37 @@
+body, html {
+  /*  background-image: url('../images/pokedex.png');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;*/
+}
+
+ul {
+    list-style-type: none;
+}
+li {
+    margin: 5px;
+    border: 1px;
+}
+
+#poison {
+    background-color: purple;
+    margin-left: 5px;
+}
+
+.pokemon {
+   background-color: tan;
+}
+
+.jumbo-container {
+    text-align: center;
+}
+.top {
+padding-top: 30px;
+}
+
+
+    
+.modal-dialog {
+    color: whitesmoke;
+}
