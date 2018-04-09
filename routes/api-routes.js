@@ -25,7 +25,7 @@ module.exports = function(app) {
         type_1: req.params.type_1
       }
   })
-  }
+  })
 
 // Display pokemon data for a given name
   app.get("/api/name/:name", function(req, res){
