@@ -6,7 +6,7 @@ module.exports = function(sequelize, DataTypes) {
           },
          
     }, {
-        timestamp: false
+        timestamps: false
     });
 
     return images
