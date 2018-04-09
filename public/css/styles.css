@@ -6,8 +6,21 @@ body, html {
     background-size: cover;*/
 }
 
-#pokedex {
-    float: right;
+ul {
+    list-style-type: none;
+}
+li {
+    margin: 5px;
+    border: 1px;
+}
+
+#poison {
+    background-color: purple;
+    margin-left: 5px;
+}
+
+.pokemon {
+   background-color: tan;
 }
 
 .jumbo-container {
@@ -15,4 +28,10 @@ body, html {
 }
 .top {
 padding-top: 30px;
+}
+
+
+    
+.modal-dialog {
+    color: whitesmoke;
 }

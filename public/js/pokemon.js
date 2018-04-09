@@ -69,3 +69,16 @@ firebase.auth().onAuthStateChanged(function (firebaseUser) {
 });
 
 
+$('.pokemon').on('click', function() {
+    event.preventDefault();
+    
+
+    $('#pokeModal').modal('toggle');
+
+
+})
+
+
+
+
+
