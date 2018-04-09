@@ -1,5 +1,5 @@
 module.exports = function(sequelize, DataTypes) {
-    var PokeData = sequelize.define("pokemomStats", {
+    var bob = sequelize.define("pokemonstats", {
         name: {
             type: DataTypes.STRING,
             // AllowNull is a flag that restricts a todo from being entered if it doesn't
@@ -75,8 +75,7 @@ module.exports = function(sequelize, DataTypes) {
             timestamps: false
     });
     
-    return PokeData;
+    return bob;
 
-    module.exports = PokeData;
 };
   
