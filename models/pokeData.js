@@ -1,6 +1,6 @@
 module.exports = function(sequelize, DataTypes) {
-    var bob = sequelize.define("pokemonstats", {
-        name: {
+    var pokemonstats = sequelize.define("pokemonstats", {
+        pokeName: {
             type: DataTypes.STRING,
             // AllowNull is a flag that restricts a todo from being entered if it doesn't
             // have a text value
@@ -11,7 +11,7 @@ module.exports = function(sequelize, DataTypes) {
             }
         },
 
-        type_1: {
+        Type_1: {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
@@ -19,7 +19,7 @@ module.exports = function(sequelize, DataTypes) {
             }
         },
 
-        type_2: {
+        Type_2: {
             type: DataTypes.STRING,
             allowNull: true,
             validate: {
@@ -27,47 +27,47 @@ module.exports = function(sequelize, DataTypes) {
             }
         },
 
-        total: {
+        Total: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
 
-        hp: {
+        HP: {
             type: DataTypes.INTEGER,
             allowNull: false
         }, 
         
-        attack: {
+        Attack: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
 
-        defense: {
+        Defense: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
 
-        special_atk: {
+        Special_atk: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
 
-        special_def: {
+        Special_def: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
 
-        speed: {
+        Speed: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
 
-        generation: {
+        Generation: {
             type: DataTypes.INTEGER,
             allowNull: false
         },
 
-        legendary: {
+        Legendary: {
             type: DataTypes.BOOLEAN,
             allowNull: false
         },
@@ -75,7 +75,7 @@ module.exports = function(sequelize, DataTypes) {
             timestamps: false
     });
     
-    return bob;
+    return pokemonstats;
 
 };
   
