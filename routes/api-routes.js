@@ -19,27 +19,36 @@ module.exports = function (app) {
         res.json(PokeDb);
       });
   });
-  // Display data for all pokemon of a certain type
-  app.get("/api/type/:type_1", function (req, res) {
+
+// Display data for all pokemon of a certain type
+  app.get("/api/pokemon/:Type_1", function(req, res) {
     db.pokemonstats.findAll({
       where: {
-        type_1: req.params.type_1
+        Type_1: req.params.Type_1
       }
-    });
+    }).then(function(PokeDb){
+      res.json(PokeDb);
+    })
   });
 
-  // Display pokemon data for a given name
-  app.get("/api/name/:name", function (req, res) {
-    db.pokemonstats.findOne({
+// Display pokemon data for a given name
+  app.get("/api/:pokeName", function(req, res){
+    db.pokemonstats.findAll({
       where: {
-        name: req.params.name
+        pokeName: req.params.pokeName
       }
-    });
-  })
-
-  app.delete("/api/", function (req, res) {
+    }).then(function(PokeDb){
+      res.json(PokeDb);
+    })
   });
 
-  app.put("/api/:anything", function (req, res) {
-  });
+  
+  // app.delete("/api/", function(req, res) {
+
+  // });
+
+  
+  // app.put("/api/:anything", function(req, res) {
+
+  // });
 }
