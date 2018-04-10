@@ -7,8 +7,11 @@ module.exports = function(app) {
 
   
   app.get("/", function(req, res) {
-
-    res.render('index');
+    db.pokemonstats.findAll({
+      include: [db.images]
+    }).then(function(result) {
+      res.render('index', {pokemon: result} )
+    });
   });
   
   
