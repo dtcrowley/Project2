@@ -22,5 +22,7 @@ CREATE TABLE pokemonStats (
 CREATE TABLE images (
     id INTEGER (10) NOT NULL,
     Img VARCHAR (100) NOT NULL,
-    PRIMARY KEY (id)
+    pokID int,
+    PRIMARY KEY (id),
+    FOREIGN KEY(pokID) REFERENCES pokemonStats(id)
 );
