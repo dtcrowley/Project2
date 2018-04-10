@@ -4,11 +4,10 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false,
           },
-         pokID: {
+        pokID: {
             type: DataTypes.INTEGER,
-            allowNull: false,
-          }
-         
+            allowNull: false
+        }         
     }, {
         timestamps: false
     });
@@ -21,4 +20,4 @@ module.exports = function(sequelize, DataTypes) {
     };
 
     return images
-}
+};

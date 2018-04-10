@@ -1,11 +1,7 @@
-
-
 var db = require("../models");
-
 
 module.exports = function(app) {
 
-  
   app.get("/", function(req, res) {
     db.pokemonstats.findAll({
       include: [db.images]
@@ -19,7 +15,7 @@ module.exports = function(app) {
     db.images.findAll({}).then(function(result) {
       res.json(result)
     })
-  })
+  });
 
 // Display data for all pokemon
   app.get("/api/pokemon/", function(req, res) {
@@ -50,6 +46,16 @@ module.exports = function(app) {
       res.json(PokeDb);
     })
   });
+
+  // app.get("/api/:id", function(req, res){
+  //   db.pokemonstats.findAll({
+  //     where: {
+  //       id: req.params.id
+  //     }
+  //   }).then(function(PokeDb){
+  //     res.json(PokeDb);
+  //   })
+  // });
 
   
   // app.delete("/api/", function(req, res) {
