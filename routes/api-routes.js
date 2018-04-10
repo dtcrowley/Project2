@@ -14,6 +14,8 @@ module.exports = function (app) {
 
   // Display data for all pokemon
   app.get("/api/pokemon/", function (req, res) {
+    console.log(Object.keys(db))
+
     db.pokemonstats.findAll()
       .then(function (PokeDb) {
         res.json(PokeDb);
