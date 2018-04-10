@@ -3,6 +3,7 @@ var express = require("express");
 var bodyParser = require("body-parser");
 var path = require("path");
 var handlebars = require("handlebars");
+// var pokemon = require("pokemon-battle");
 
 
 // Sets up the Express App
@@ -37,3 +38,4 @@ db.sequelize.sync({force: false}).then(function() {
     console.log("App listening on PORT " + PORT);
   });
 });
+
