@@ -3,8 +3,8 @@ CREATE DATABASE pokemon;
 USE pokemon;
 
 CREATE TABLE pokemonStats (
-    id INTEGER (10) NOT NULL AUTO_INCREMENT,
-    Name VARCHAR (100) NOT NULL,
+    id INTEGER (10) NOT NULL,
+    pokeName VARCHAR (100) NOT NULL,
     Type_1 VARCHAR (100) NOT NULL,
     Type_2 VARCHAR (100),
     Total INTEGER (10) NOT NULL,
@@ -20,7 +20,7 @@ CREATE TABLE pokemonStats (
 );
 
 CREATE TABLE images (
-    id INTEGER (10) NOT NULL AUTO_INCREMENT,
+    id INTEGER (10) NOT NULL,
     Img VARCHAR (100) NOT NULL,
     PRIMARY KEY (id)
 );
