@@ -1,81 +1,39 @@
-// Initialize Firebase
-var config = {
-    apiKey: "AIzaSyAlny4lMf5WEg_jYCZME2HHP1gbkzuP0KQ",
-    authDomain: "pokedex-user-auth.firebaseapp.com",
-    databaseURL: "https://pokedex-user-auth.firebaseio.com",
-    projectId: "pokedex-user-auth",
-    storageBucket: "pokedex-user-auth.appspot.com",
-    messagingSenderId: "38189101021"
-};
-firebase.initializeApp(config);
+// Code for modal popups on a specific pokemon being clicked //////////////////////////////////////
+$('#pokeModal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget);
+    var base = location.origin;
 
-var userDatabase = firebase.database();
+    $('.pokemon').on('click', function (event) {
+        if ($(this)) {
+            var passedName = $(this).attr('data-id');
+            console.log(passedName);
+        }
 
-var userEmail = $('#userEmail'); 
-console.log(userEmail);
-var userPassword = $('#userPassword');
-var btnLogIn = $('#btnLogIn');
-var btnSignUp = $('#btnSignUp');
-var btnLogOut = $('#btnLogOut');
-
-
-// sign up
-btnSignUp.on('click', function (event) {
-    event.preventDefault();
-    // Get email and pass  check for real email
-    var email = userEmail.val();
-    var password = userPassword.val();
-    var auth = firebase.auth();
-
-    // sign up
-    auth.createUserWithEmailAndPassword(email, password).catch(function (err) {
-        console.log(err.message)
-    })
-});
-
-// Log In Event
-btnLogIn.on('click', function (event) {
-    event.preventDefault();
-    // Get email and pass
-    var email = userEmail.val();
-    var password = userPassword.val();
-    var auth = firebase.auth();
-
-    // sign in
-    auth.signInWithEmailAndPassword(email, password).catch(function (err) {
-        console.log(err.message)
-    })
-
-});
-
-btnLogOut.on('click', function (event) {
-    event.preventDefault();
-    firebase.auth().signOut().then(function () {
-        // Sign-out successful.
-    }).catch(function (error) {
-        // An error happened.
+        var res = button.data($.ajax({
+            url: base + '/api/' + passedName, success: function (result) {
+                console.log(result[0]);
+                $(".modal-title").html(result[0].pokeName);
+                $(".modal-body").html('<br> \nAttack: ' + result[0].Attack + '<br> \nDefense: ' + result[0].Defense +
+                    '<br> \nHP: ' + result[0].HP + '<br> \nSpeed: ' + result[0].Speed + '<br> \nSpecial Attack: ' +
+                    result[0].Special_atk + '<br> \nSpecial Defense: ' + result[0].Special_def)
+                $('.pokeI').attr('src', '.' + result[0].images[0].img)
+                //  var modal = $(this)
+                //  console.log(modal);
+                // modal.find('.modal-body').text(result[0].Attack);
+            }
+        }))
     });
-})
-
-
-
-firebase.auth().onAuthStateChanged(function (firebaseUser) {
-    if (firebaseUser) {
-        console.log(firebaseUser);
-    }
-    else {
-        console.log('not logged in');
-    }
 });
+$(document).ready(function () {
 
+    $('.pokemon').on('click', function (event) {
+        event.preventDefault();
 
-$('.pokemon').on('click', function() {
-    event.preventDefault();
-    
-    $('#pokeModal').modal('toggle');
-
+        $('#pokeModal').modal('toggle');
+    });
 
 })
+//////////////////////////////////////////////////////////////////////////////////
 
 
 
