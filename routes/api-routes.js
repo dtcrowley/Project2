@@ -10,13 +10,13 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/arena", function(req, res) {
-    db.pokemonstats.findAll({
-      include: [db.images]
-    }).then(function(result){
-      res.render("battle", {pokemon: result} )
-    });
-  });
+  // app.get("/arena", function(req, res) {
+  //   db.pokemonstats.findAll({
+  //     include: [db.images]
+  //   }).then(function(result){
+  //     res.render("battle", {pokemon: result} )
+  //   });
+  // });
   
   
   app.get('/api/pokemon/image', function(req,res) {
