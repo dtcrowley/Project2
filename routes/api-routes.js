@@ -1,4 +1,5 @@
 var db = require("../models");
+var passport = require("../config/passport");
 
 module.exports = function (app) {
 
@@ -27,6 +28,7 @@ module.exports = function (app) {
 
   app.get('/api/pokemon/image', function (req, res) {
     db.images.findAll({}).then(function (result) {
+
       res.json(result)
     })
   });
@@ -82,4 +84,3 @@ module.exports = function (app) {
 
   // });
 }
-
