@@ -120,8 +120,8 @@ padding-top: 20px;
     bottom: 12px;
 }
 .jumbotron {
-   /* background-size: cover;
-    background-image: url(http://eskipaper.com/images/pokemon-backgrounds-1.jpg);
+    /*background-size: inherit;
+    background-image: url(https://wallpapercave.com/wp/l1mDM6N.jpg);
     color: whitesmoke;*/
     position: relative;
     top: 75px;
