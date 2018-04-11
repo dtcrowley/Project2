@@ -28,24 +28,25 @@
     </div>
 </div>
 
-<div class="poke-wrapper wrapper">
+<div class="wrapper">
     <ul id="pokedex">
         {{#each pokemon}}
         <li>
-            <figure>
-                <button class="pokemon">
-                    {{#each images}}
-                        <img src=".{{img}}" alt="pokemon">
-                    {{/each}}
-                </button>
-            </figure>
-           
-            <div class="info">
-                <h5>{{pokeName}}</h5>
-                <span class="badge badge-success">{{Type_1}}</span>
-                <span id='poison' class="badge badge-success">Poison</span>
+            <div class="pokeHolder">
+                <figure>
+                    <h5> #{{id}} {{pokeName}}</h5>
+                    <button class="pokemon" data-id="{{pokeName}}">
+                        {{#each images}}
+                        <img src=".{{img}}" alt="pokemon"> {{/each}}
+                    </button>
+                </figure>
+
+                <div class="info">
+                    <span class="badge {{Type_1}}">{{Type_1}}</span>
+                    <span class="badge {{Type_2}}">{{Type_2}}</span>
+                </div>
             </div>
-            
+
         </li>
         {{/each}}
 
@@ -53,9 +54,10 @@
 </div>
 <div id="pokeModal" class="modal fade" role="dialog" style="display: none;">
     <div class="modal-dialog">
-        <h4>Bulbasaur</h4>
+        <div class="modal-body">
         <div class="divider"></div>
-        <img id="matchPhoto" class="materialboxed" width="200" src="../images/1.png">
+        <img class="materialboxed pokeI" width="200" src="">
+        </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
         </div>

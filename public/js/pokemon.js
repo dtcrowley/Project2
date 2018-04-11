@@ -11,7 +11,7 @@ firebase.initializeApp(config);
 
 var userDatabase = firebase.database();
 
-var userEmail = $('#userEmail'); 
+var userEmail = $('#userEmail');
 console.log(userEmail);
 var userPassword = $('#userPassword');
 var btnLogIn = $('#btnLogIn');
@@ -68,12 +68,47 @@ firebase.auth().onAuthStateChanged(function (firebaseUser) {
     }
 });
 
+// $('.pokemon').on('click', function(event) {
+// if($(this)) {
+//     var passedName = $(this).attr('data-id');
+//     console.log(passedName);
+//     }
+// });
 
-$('.pokemon').on('click', function() {
-    event.preventDefault();
+
+$('#pokeModal').on('show.bs.modal', function (event) {
+    var button = $(event.relatedTarget);
+    var base = location.origin;
     
-    $('#pokeModal').modal('toggle');
+    $('.pokemon').on('click', function (event) {
+        if ($(this)) {
+            var passedName = $(this).attr('data-id');
+            console.log(passedName);
+        }
+       
+        var res = button.data($.ajax({
+            url: base + '/api/' + passedName, success: function (result) {
+                console.log(result[0]);
+                $(".modal-body").text(result[0].pokeName);
+                $(".modal-body").append('\nAttack: ' + result[0].Attack + '\nDefense: ' + result[0].Defense +
+                '\nHP: ' + result[0].HP + '\nSpeed: ' + result[0].Speed + '\nSpecial Attack: ' + 
+                result[0].Special_atk + '\nSpecial Defense: ' + result[0].Special_def)
+                $('.pokeI').attr('src', '../public' + result[0].images[0].img)
+                //  var modal = $(this)
+                //  console.log(modal);
+                // modal.find('.modal-body').text(result[0].Attack);
+            }
+        }))
+    });
+});
 
+$(document).ready(function () {
+
+    $('.pokemon').on('click', function (event) {
+        event.preventDefault();
+
+        $('#pokeModal').modal('toggle');
+    });
 
 })
 
