@@ -35,7 +35,7 @@
             <div class="pokeHolder">
                 <figure>
                     <h5> #{{id}} {{pokeName}}</h5>
-                    <button class="pokemon" data-id="{{pokeName}}">
+                    <button class="pokemon" data-id="{{pokeName}}" data-toggle="modal" data-target="#pokeModal">
                         {{#each images}}
                         <img src=".{{img}}" alt="pokemon"> {{/each}}
                     </button>
