@@ -49,7 +49,8 @@ module.exports = function(app) {
     db.pokemonstats.findAll({
       where: {
         pokeName: req.params.pokeName
-      }
+      },
+      include: [db.images]
     }).then(function(PokeDb){
       res.json(PokeDb);
     })
