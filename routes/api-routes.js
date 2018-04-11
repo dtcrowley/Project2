@@ -9,8 +9,6 @@ module.exports = function (app) {
       res.render('index', { pokemon: result })
     });
   });
-
-
   
   app.get("/:pokeName", function (req, res) {
     

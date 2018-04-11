@@ -136,4 +136,43 @@ padding-top: 20px;
     float: left;
 }
 
-    
+.modal-dialog {
+    color: whitesmoke;
+}
+
+#characters-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.character {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background: tan;
+  }
+
+.character-image {
+    width: 215px;
+    height: 215px;
+}
+
+.character-name {
+    text-align: center;
+}
+
+.character-health {
+    text-align: center;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#main-game-section {
+    margin-left: 100px;
+}
+
