@@ -140,6 +140,11 @@ padding-top: 20px;
     color: whitesmoke;
 }
 
+#characters-section {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
 .character {
     display: inline-block;
     cursor: pointer;
