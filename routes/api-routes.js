@@ -48,8 +48,16 @@ module.exports = function (app) {
     }
   });
 
-  app.get('/api/pokemon/image', function (req, res) {
-    db.images.findAll({}).then(function (result) {
+  app.get("/arena", function(req, res) {
+    db.pokemonstats.findAll({
+      include: [db.images]
+    }).then(function(result){
+      res.render("battle", {pokemon: result} )
+    });
+  });
+  
+  app.get('/api/pokemon/image', function(req,res) {
+    db.images.findAll({}).then(function(result) {
       res.json(result)
     })
   });
@@ -80,7 +88,8 @@ module.exports = function (app) {
     db.pokemonstats.findAll({
       where: {
         pokeName: req.params.pokeName
-      }
+      },
+      include: [db.images]
     }).then(function(PokeDb){
       res.json(PokeDb);
     })
