@@ -120,11 +120,13 @@ padding-top: 20px;
     bottom: 12px;
 }
 .jumbotron {
-    /*background-size: inherit;
-    background-image: url(https://wallpapercave.com/wp/l1mDM6N.jpg);
+    
+    /*background-image: url(https://wallpapercave.com/wp/l1mDM6N.jpg);
     color: whitesmoke;*/
     position: relative;
     top: 75px;
+    max-width: 100%;
+    height: auto;
     
 }
 #pokeModal {
