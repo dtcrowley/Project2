@@ -37,7 +37,7 @@
 	</nav>
 	<div class="containerWhole">
 		<div class="top">
-			<div class="jumbotron jumbotron-fluid">
+			<div class="jumbotron jumbotron-fluid" id="battle-jumbo">
 				<div class="jumbo-container">
 					<h1 class="display-4">PokeBattle!</h1>
                     <h3>Generation I</h3>
@@ -45,40 +45,43 @@
 				</div>
 			</div>
 		</div>
-		
-        <div id="main-game-section">
-            <!-- Where the characters are initially available to be selected. -->
-            <div id="characters-section">
-                <div class="section-title">Select Your Pokemon!</div>
-            </div>
-            
-            
+		<div>
+        <img src="https://wallpapertag.com/wallpaper/small/c/4/c/771103-pokemon-black-wallpaper-1920x1080-meizu.jpg#.Ws5npkOkp5o.link" style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; z-index: -1">
+      <div id="main-game-section">
+          <!-- Where the characters are initially available to be selected. -->
+          <div id="characters-section">
+              <div class="section-title">Select Your Pokemon!</div>
+          </div>
+          
+          
 
-            <!-- Where our enemies available to attack will appear. -->
-            <div id="available-to-attack-section">
-                <div class="section-title">Enemy Pokemon Available To Attack</div>
-            </div>
+          <!-- Where our enemies available to attack will appear. -->
+          <div id="available-to-attack-section">
+              <div class="section-title">Enemy Pokemon Available To Attack</div>
+          </div>
 
-            <!-- Section for our selected character. -->
-            <div id="selected-character-section">
-                <div class="section-title">Your Pokemon</div>
-                <!-- Where our selected character will appear. -->
-                <div id="selected-character"></div>
-            </div>
+          <!-- Section for our selected character. -->
+          <div id="selected-character-section">
+              <div class="section-title">Your Pokemon</div>
+              <!-- Where our selected character will appear. -->
+              <div id="selected-character"></div>
+          </div>
 
-            <div id="action">
-                <div class="character-section">
-                    <div class="section-title">Defender</div>
-                    <!-- Where our defender will appear. -->
-                    <div id="defender"></div>
-                </div>
-            </div>
-            
-            <div class="section-title"></div>
-            <div id="fight-section">
-                <button id="attack-button">Attack</button>
-            </div>
-		</div>
+          <div id="action">
+              <div class="character-section">
+                  <div class="section-title">Defender</div>
+                  <!-- Where our defender will appear. -->
+                  <div id="defender"></div>
+              </div>
+          </div>
+          
+          <div class="section-title"></div>
+          <div id="fight-section">
+              <button id="attack-button" style="margin-left: 100px;">Attack</button>
+              <hr>
+          </div>
+      </div>
+    </div>
 
 		<!-- Area for game messages. -->
 		<div id="game-message"></div>
@@ -324,9 +327,10 @@
     // Function which handles restarting the game after victory or defeat.
     var restartGame = function(resultMessage) {
       // When the 'Restart' button is clicked, reload the page.
-      var restart = $("<button>Restart</button>").click(function() {
+      var restart = $("<button class='restart-button'>Restart</button>").click(function() {
         location.reload();
       });
+
   
       // Build div that will display the victory/defeat message.
       var gameState = $("<div>").text(resultMessage);
