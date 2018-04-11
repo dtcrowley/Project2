@@ -122,8 +122,8 @@ padding-top: 20px;
     bottom: 12px;
 }
 .jumbotron {
-   /* background-size: cover;
-    background-image: url(http://eskipaper.com/images/pokemon-backgrounds-1.jpg);
+    /*background-size: inherit;
+    background-image: url(https://wallpapercave.com/wp/l1mDM6N.jpg);
     color: whitesmoke;*/
     position: relative;
     top: 75px;
@@ -140,6 +140,11 @@ padding-top: 20px;
 
 .modal-dialog {
     color: whitesmoke;
+}
+
+#characters-section {
+    margin-top: 100px;
+    margin-bottom: 20px;
 }
 
 .character {
@@ -173,3 +178,39 @@ padding-top: 20px;
     margin-left: 100px;
 }
 
+#selected-character-section {
+    width: 33%;
+    float: left;
+}
+
+#fight-section {
+    width: 33%;
+    float: left;
+    margin-left: 33%;
+}
+
+#character-section {
+    width: 33%;
+    float: left;
+}
+
+#defender {
+    width: 33%;
+    float: right;
+}
+
+#battle-jumbo {
+    height: 250px;
+    margin-top: 0px;
+
+}
+
+#available-to-attack-section {
+    margin-top: 200px;
+    margin-bottom: 20px;
+}
+
+.restart-button {
+    margin-left: 45.2%;
+    margin-top: 20px;
+}
