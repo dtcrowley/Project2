@@ -104,9 +104,20 @@ ul {
 .top {
 padding-top: 20px;
 }
+.modal-header {
+    color: white;
+    text-align: center;
+   
+}
+.modal-title {
+    
+}
 
 .modal-body{
     color: white;
+    text-align: center;
+    position: relative;
+    bottom: 10px;
 }
 .jumbotron {
    /* background-size: cover;
@@ -119,8 +130,10 @@ padding-top: 20px;
 #pokeModal {
     position: fixed;
     top: 40%;
-    
-    
+}
+.pokeI {
+    display: block;
+    float: left;
 }
 
     

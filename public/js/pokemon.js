@@ -89,11 +89,11 @@ $('#pokeModal').on('show.bs.modal', function (event) {
         var res = button.data($.ajax({
             url: base + '/api/' + passedName, success: function (result) {
                 console.log(result[0]);
-                $(".modal-body").text(result[0].pokeName);
-                $(".modal-body").append('\nAttack: ' + result[0].Attack + '\nDefense: ' + result[0].Defense +
-                '\nHP: ' + result[0].HP + '\nSpeed: ' + result[0].Speed + '\nSpecial Attack: ' + 
-                result[0].Special_atk + '\nSpecial Defense: ' + result[0].Special_def)
-                $('.pokeI').attr('src', '../public' + result[0].images[0].img)
+                $(".modal-title").html(result[0].pokeName);
+                $(".modal-body").html('<br> \nAttack: ' + result[0].Attack + '<br> \nDefense: ' + result[0].Defense +
+                '<br> \nHP: ' + result[0].HP + '<br> \nSpeed: ' + result[0].Speed + '<br> \nSpecial Attack: ' + 
+                result[0].Special_atk + '<br> \nSpecial Defense: ' + result[0].Special_def)
+                $('.pokeI').attr('src', '.' + result[0].images[0].img)
                 //  var modal = $(this)
                 //  console.log(modal);
                 // modal.find('.modal-body').text(result[0].Attack);
