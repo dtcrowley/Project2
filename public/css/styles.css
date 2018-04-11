@@ -176,3 +176,22 @@ padding-top: 20px;
     margin-left: 100px;
 }
 
+#selected-character-section {
+    width: 33%;
+    float: left;
+}
+
+#fight-section {
+    width: 33%;
+    float: left;
+}
+
+#character-section {
+    width: 33%;
+    float: left;
+}
+
+#defender {
+    width: 33%;
+    float: right;
+}
