@@ -74,6 +74,14 @@ module.exports = function(sequelize, DataTypes) {
     },{
             timestamps: false
     });
+
+    pokemonstats.associate = function(models) {
+        pokemonstats.hasMany(models.images, {
+            onDelete: 'cascade',
+            sourceKey: 'id',
+            foreignKey: 'pokID'
+        });
+    }
     
     return pokemonstats;
 

@@ -1,37 +1,173 @@
 body, html {
-  /*  background-image: url('../images/pokedex.png');
+    /*background-image: url(http://eskipaper.com/images/pokemon-backgrounds-1.jpg);
     height: 100%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;*/
+    
+}
+.wrapper {
+    margin: auto;
+    width: 75%;
+    padding-top: 100px;
 }
 
 ul {
     list-style-type: none;
 }
-li {
+.pokeHolder {
     margin: 5px;
     border: 1px;
+    float: left;
+    margin-bottom: 50px;
+}
+.badge {
+    width: 90px;
+    position: relative;
+    left: 20px;
 }
 
-#poison {
+.Grass {
+    clear: both;
+    background-color: green;
+    color: whitesmoke;
+}
+.Poison {
     background-color: purple;
     margin-left: 5px;
+    color: whitesmoke;
 }
-
+.Fire {
+    background-color: red;
+    color: whitesmoke;
+}
+.Water {
+    background-color: rgb(0, 132, 255);
+    color: whitesmoke;
+}
+.Flying {
+    background-color: mediumpurple;
+    color: whitesmoke;
+    
+}
+.Bug {
+    background-color: lightgreen;
+    
+}
+.Normal {
+    background-color: gray;
+    color: whitesmoke;
+}
+.Electric {
+    background-color: rgb(200, 255, 0);
+}
+.Ground {
+    background-color: sandybrown;
+    
+}
+.Fairy {
+    background-color: pink;
+}
+.Fighting {
+    background-color: rgb(139, 30, 30);
+    color: whitesmoke;
+}
+.Psychic {
+    background-color: rgb(48, 6, 88);
+    color: whitesmoke;
+}
+.Rock{
+    background-color: brown;
+    color: whitesmoke;
+}
+.Steel {
+    background-color: lightgray;
+}
+.Ghost {
+    background-color: black;
+    color: whitesmoke;
+}
+.Ice {
+    background-color: aqua;
+}
+.Dragon {
+    background-color: rosybrown;
+}
 .pokemon {
    background-color: tan;
+   opacity: 1;
+   
 }
-
 .jumbo-container {
     text-align: center;
 }
 .top {
-padding-top: 30px;
+padding-top: 20px;
+}
+.modal-header {
+    color: white;
+    text-align: center;
+   
+}
+.modal-title {
+    
 }
 
-
+.modal-body{
+    color: white;
+    text-align: center;
+    position: relative;
+    bottom: 12px;
+}
+.jumbotron {
+   /* background-size: cover;
+    background-image: url(http://eskipaper.com/images/pokemon-backgrounds-1.jpg);
+    color: whitesmoke;*/
+    position: relative;
+    top: 75px;
     
+}
+#pokeModal {
+    position: fixed;
+    top: 30%;
+}
+.pokeI {
+    display: block;
+    float: left;
+}
+
 .modal-dialog {
     color: whitesmoke;
 }
+
+.character {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background: tan;
+  }
+
+.character-image {
+    width: 215px;
+    height: 215px;
+}
+
+.character-name {
+    text-align: center;
+}
+
+.character-health {
+    text-align: center;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#main-game-section {
+    margin-left: 100px;
+}
+
