@@ -4,10 +4,13 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function(app) {
 
+  // app.get("/members", function(req, res) {
+  //   if (req.user) {
+  //     res.redirect("/members");
+  //   }
+  //   res.sendFile(path.join(__dirname, "../public/html/index.html"));
+  // });
   app.get("/", function(req, res) {
-    if (req.user) {
-      res.redirect("/members");
-    }
     res.sendFile(path.join(__dirname, "../public/html/index.html"));
   });
 
@@ -15,13 +18,14 @@ module.exports = function(app) {
     if (req.user) {
       res.redirect("/members");
     }
-    res.sendFile(path.join(__dirname, "../public/login.html"));
+    res.sendFile(path.join(__dirname, "../public/html/login.html"));
   });
 
   app.get("/members", isAuthenticated, function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/members.html"));
+    res.sendFile(path.join(__dirname, "../public/html/members.html"));
   });
+  
   app.get("/battle", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/battle.html"));
+    res.sendFile(path.join(__dirname, "../public/html/battle.html"));
   })
 };
