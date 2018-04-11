@@ -13,8 +13,9 @@
 	<script src="https://www.gstatic.com/firebasejs/4.12.1/firebase.js"></script>
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-	 crossorigin="anonymous">
-	<!-- Bootstrap Javascript -->
+     crossorigin="anonymous">
+     <link rel="stylesheet" href="public/css/styles.css">
+     <!-- Bootstrap Javascript -->
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
 	 crossorigin="anonymous"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
@@ -44,39 +45,37 @@
 				</div>
 			</div>
 		</div>
-		<div class="container">
-			<div id="main-game-section">
-				<!-- Where the characters are initially available to be selected. -->
-				<div id="characters-section">
-					<div class="section-title">Select Your Character</div>
-				</div>
-				
-				<!-- Section for our selected character. -->
-				<div id="selected-character-section">
-					<div class="section-title">Your Character</div>
-					<!-- Where our selected character will appear. -->
-					<div id="selected-character"></div>
-				</div>
+		
+        <div id="main-game-section">
+            <!-- Where the characters are initially available to be selected. -->
+            <div id="characters-section">
+                <div class="section-title">Select Your Character</div>
+            </div>
+            
+            <!-- Section for our selected character. -->
+            <div id="selected-character-section">
+                <div class="section-title">Your Character</div>
+                <!-- Where our selected character will appear. -->
+                <div id="selected-character"></div>
+            </div>
 
-				<!-- Where our enemies available to attack will appear. -->
-				<div id="available-to-attack-section">
-					<div class="section-title">Enemies Available To Attack</div>
-				</div>
+            <!-- Where our enemies available to attack will appear. -->
+            <div id="available-to-attack-section">
+                <div class="section-title">Enemies Available To Attack</div>
+            </div>
 
-				<div class="section-title">Fight Section</div>
-				<div id="fight-section">
-					<button id="attack-button">Attack</button>
-				</div>
+            <div class="section-title">Fight Section</div>
+            <div id="fight-section">
+                <button id="attack-button">Attack</button>
+            </div>
 
-				<div id="action">
-					<div class="character-section">
-						<div class="section-title">Defender</div>
-						<!-- Where our defender will appear. -->
-						<div id="defender"></div>
-					</div>
-				</div>
-
-			</div>
+            <div id="action">
+                <div class="character-section">
+                    <div class="section-title">Defender</div>
+                    <!-- Where our defender will appear. -->
+                    <div id="defender"></div>
+                </div>
+            </div>
 		</div>
 
 		<!-- Area for game messages. -->

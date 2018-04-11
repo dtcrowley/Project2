@@ -32,7 +32,7 @@ $(document).ready(function() {
         Speed: 100,
         Generation: 1,
         Legendary: false,
-        imageUrl: "C:/Users/crowl/Bootcamp_Materials/project2/Project2/public/images/6.png"
+        imageUrl: "/images/6.png"
         },
       "Blastoise": {
         id: 9,
@@ -48,7 +48,7 @@ $(document).ready(function() {
         Speed: 78,
         Generation: 1,
         Legendary: false,
-        imageUrl: "C:/Users/crowl/Bootcamp_Materials/project2/Project2/public/images/9.png"
+        imageUrl: "/images/9.png"
         },
       "Raichu": {
         id: 26,
@@ -64,7 +64,7 @@ $(document).ready(function() {
         Speed: 110,
         Generation: 1,
         Legendary: false,
-        imageUrl: "C:/Users/crowl/Bootcamp_Materials/project2/Project2/public/images/26.png"
+        imageUrl: "/images/26.png"
         },
       "Nidoqueen": {
         id: 31,
@@ -80,7 +80,7 @@ $(document).ready(function() {
         Speed: 76,
         Generation: 1,
         Legendary: false,
-        imageUrl: "C:/Users/crowl/Bootcamp_Materials/project2/Project2/public/images/31.png"
+        imageUrl: "/images/31.png"
         },
       "Dugtrio": {
         id: 51,
@@ -96,7 +96,7 @@ $(document).ready(function() {
         Speed: 120,
         Generation: 1,
         Legendary: false,
-        imageUrl: "C:/Users/crowl/Bootcamp_Materials/project2/Project2/public/images/51.png"
+        imageUrl: "/images/51.png"
         },
       "Alakazam": {
         id: 65,
@@ -112,7 +112,7 @@ $(document).ready(function() {
         Speed: 120,
         Generation: 1,
         Legendary: false,
-        imageUrl: "C:/Users/crowl/Bootcamp_Materials/project2/Project2/public/images/65.png"
+        imageUrl: "/images/65.png"
         },
       "Gengar": {
         id: 94,
@@ -128,7 +128,7 @@ $(document).ready(function() {
         Speed: 110,
         Generation: 1,
         Legendary: false,
-        imageUrl: "C:/Users/crowl/Bootcamp_Materials/project2/Project2/public/images/94.png"
+        imageUrl: "/images/94.png"
         },
       "Hitmonchan": {
         id: 107,
@@ -144,7 +144,7 @@ $(document).ready(function() {
         Speed: 76,
         Generation: 1,
         Legendary: false,
-        imageUrl: "C:/Users/crowl/Bootcamp_Materials/project2/Project2/public/images/107.png"
+        imageUrl: "/images/107.png"
         },
       "Aerodactyl": {
         id: 142,
@@ -160,7 +160,7 @@ $(document).ready(function() {
         Speed: 130,
         Generation: 1,
         Legendary: false,
-        imageUrl: "C:/Users/crowl/Bootcamp_Materials/project2/Project2/public/images/142.png"
+        imageUrl: "/images/142.png"
         }
     };
   
@@ -185,7 +185,7 @@ $(document).ready(function() {
       var charDiv = $("<div class='character' data-name='" + character.pokename + "'>");
       var charName = $("<div class='character-name'>").text(character.pokename + " - Type: " + character.Type_1);
       var charImage = $("<img alt='image' class='character-image'>").attr("src", character.imageUrl);
-      var charHealth = $("<div class='character-health'>").text("HP: " + character.HP);
+      var charHealth = $("<div class='character-health'>").text("HP: " +character.HP);
     //   var charType = $("<div class='character-health'>").text(character.type_1);
       charDiv.append(charName).append(charImage).append(charHealth);
       $(renderArea).append(charDiv);
@@ -257,7 +257,7 @@ $(document).ready(function() {
       // If a player character has not yet been chosen...
       if (!attacker) {
         // We populate attacker with the selected character's information.
-        attacker = characters[pokeName];
+        attacker = characters[pokename];
         // We then loop through the remaining characters and push them to the combatants array.
         for (var key in characters) {
           if (key !== name) {

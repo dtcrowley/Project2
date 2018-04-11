@@ -10,14 +10,6 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/battle", function(req, res) {
-    db.pokemonstats.findAll({
-      include: [db.images]
-    }).then(function(result){
-      res.render("battle", {pokemon: result} )
-    });
-  });
-
   app.get("/arena", function(req, res) {
     db.pokemonstats.findAll({
       include: [db.images]

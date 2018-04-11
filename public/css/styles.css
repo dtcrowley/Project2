@@ -39,3 +39,34 @@ padding-top: 30px;
 .modal-dialog {
     color: whitesmoke;
 }
+
+.character {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    background: tan;
+  }
+
+.character-image {
+    width: 215px;
+    height: 215px;
+}
+
+.character-name {
+    text-align: center;
+}
+
+.character-health {
+    text-align: center;
+}
+
+.section-title {
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#main-game-section {
+    margin-left: 100px;
+}
