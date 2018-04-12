@@ -5,7 +5,9 @@ var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function (app) {
 
-
+  app.get("/", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/index.html"));
+  });
 
   app.get("/login", function (req, res) {
     // If the user already has an account send them to the members page
@@ -15,23 +17,20 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/html/login.html"));
   });
 
-  
   // Here we've add our isAuthenticated middleware to this route.
   // If a user who is not logged in tries to access this route they will be redirected to the signup page
   app.get("/members", isAuthenticated, function (req, res) {
     res.sendFile(path.join(__dirname, "../public/html/members.html"));
   });
 
-  app.get("/signup", isAuthenticated, function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/html/signup.html"));
-  });
-  // Each of the below routes just handles the HTML page that the user gets sent to.
-
-  // index route loads view.html
   app.get("/battle", function (req, res) {
     res.sendFile(path.join(__dirname, "../public/html/battle.html"));
   });
 
+
+  app.get("/signup", function (req, res) {
+    res.sendFile(path.join(__dirname, "../public/html/signup.html"));
+  });
 };
 
 // res.sendFile(path.join(__dirname, "../public/html/signup.html"));

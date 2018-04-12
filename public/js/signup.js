@@ -3,13 +3,21 @@ $(document).ready(function() {
     var signUpForm = $("form.signup");
     var emailInput = $("input#email-input");
     var passwordInput = $("input#password-input");
-  
+    var trainerName = $("input#trainerName-input");
+    var localGym = $("input#localGym-input");
+    var pokeType = $("#pokeType")
+
+
     // When the signup button is clicked, we validate the email and password are not blank
     signUpForm.on("submit", function(event) {
       event.preventDefault();
       var userData = {
         email: emailInput.val().trim(),
-        password: passwordInput.val().trim()
+        password: passwordInput.val().trim(),
+        trainer: trainerName.val().trim(),
+        gym: localGym.val().trim(),
+        
+
       };
   
       if (!userData.email || !userData.password) {
@@ -24,7 +32,7 @@ $(document).ready(function() {
     // Does a post to the signup route. If successful, we are redirected to the members page
     // Otherwise we log any errors
     function signUpUser(email, password) {
-      $.post("/api/signup", {
+      $.post("/signup", {
         email: email,
         password: password
       }).then(function(data) {
@@ -32,6 +40,8 @@ $(document).ready(function() {
         // If there's an error, handle it by throwing up a boostrap alert
       }).catch(handleLoginErr);
     }
+
+    function printTrainerInfo(req, res) 
   
     function handleLoginErr(err) {
       $("#alert .msg").text(err.responseJSON);
