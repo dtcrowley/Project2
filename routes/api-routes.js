@@ -11,7 +11,7 @@ module.exports = function(app) {
     });
   });
 
-  app.get("/arena", function(req, res) {
+  app.get("/battle", function(req, res) {
     db.pokemonstats.findAll({
       include: [db.images]
     }).then(function(result){
@@ -26,7 +26,7 @@ module.exports = function(app) {
   });
 
 // Display data for all pokemon
-  app.get("/api/pokemon/", function(req, res) {
+  app.get("/api/pokemon", function(req, res) {
     db.pokemonstats.findAll()
       .then(function(PokeDb) {
         res.json(PokeDb);
