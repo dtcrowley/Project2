@@ -26,7 +26,7 @@ console.log(base);
 var name = $('#inputName').val();
 console.log(name);
  $.ajax({
-    url: base + '/' + name, success: function (result) {
+    url: base + '/pokemon/' + name, success: function (result) {
         console.log(result);
         $('body').html(result);
     }

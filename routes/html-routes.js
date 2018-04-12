@@ -1,20 +1,59 @@
 // Requiring path to so we can use relative routes to our HTML files
 var path = require("path");
+var db = require("../models");
 // Requiring our custom middleware for checking if a user is logged in
 var isAuthenticated = require("../config/middleware/isAuthenticated");
 
 module.exports = function (app) {
 
-  app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/html/index.html"));
+  app.get("/", function (req, res) {
+    db.pokemonstats.findAll({
+      include: [db.images]
+    }).then(function (result) {
+      res.render('index', { pokemon: result })
+    });
   });
+
+  app.get("/battle", function (req, res) {
+    db.pokemonstats.findAll({
+      include: [db.images]
+    }).then(function (result) {
+      res.render('battle', { pokemon: result })
+    });
+  });
+
+  app.get("/pokemon/:pokeName", function (req, res) {
+
+    db.pokemonstats.findAll({
+      where: {
+        pokeName: req.params.pokeName,
+
+      },
+      include: [db.images]
+    }).then(function (result) {
+      res.render('index', { pokemon: result });
+    })
+  });
+
+
+  app.get("/pokemon/:Type_1", function (req, res) {
+    db.pokemonstats.findAll({
+      where: {
+        Type_1: req.params.Type_1
+      },
+      include: [db.images]
+    }).then(function (result) {
+      res.render('index', { pokemon: result });
+    });
+  });
+
 
   app.get("/login", function (req, res) {
     // If the user already has an account send them to the members page
     if (req.user) {
       res.redirect("/members");
     }
-    res.sendFile(path.join(__dirname, "../public/html/login.html"));
+    res.render("login");
   });
 
   // Here we've add our isAuthenticated middleware to this route.
@@ -23,13 +62,8 @@ module.exports = function (app) {
     res.sendFile(path.join(__dirname, "../public/html/members.html"));
   });
 
-  app.get("/battle", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/html/battle.html"));
-  });
-
-
   app.get("/signup", function (req, res) {
-    res.sendFile(path.join(__dirname, "../public/html/signup.html"));
+    res.render("signup");
   });
 };
 
