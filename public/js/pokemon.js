@@ -27,7 +27,7 @@ var name = $('#inputName').val();
 console.log(name);
  $.ajax({
     url: base + '/pokemon/' + name, success: function (result) {
-        console.log(result);
+        
         $('body').html(result);
     }
 });
@@ -42,10 +42,10 @@ var base = location.origin;
 console.log(base);
 var type = $('#inputType').val();
 console.log(type);
-console.log(base + '/' + type);
+console.log(base + '/type/' + type);
  $.ajax({
-    url: base + '/pokemon/' + type, success: function (result) {
-        console.log(result);
+    url: base + '/type/' + type, success: function (result) {
+        
         $('body').html(result);
     }
 });

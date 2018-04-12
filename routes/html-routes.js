@@ -36,7 +36,7 @@ module.exports = function (app) {
   });
 
 
-  app.get("/pokemon/:Type_1", function (req, res) {
+  app.get("/type/:Type_1", function (req, res) {
     db.pokemonstats.findAll({
       where: {
         Type_1: req.params.Type_1
