@@ -20,7 +20,7 @@ module.exports = function (app) {
   });
 
   // Display data for all pokemon of a certain type
-  app.get("/api/pokemon/:Type_1", function (req, res) {
+  app.get("/api/type/:Type_1", function (req, res) {
     db.pokemonstats.findAll({
       where: {
         Type_1: req.params.Type_1
