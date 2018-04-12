@@ -7,7 +7,7 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false,
             // len is a validation that checks that our todo is between 1 and 140 characters
             validate: {
-            len: [1, 151]
+            len: [1, 801]
             }
         },
 
@@ -15,7 +15,7 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: false,
             validate: {
-                len: [1, 151]
+                len: [1, 801]
             }
         },
 
@@ -23,7 +23,7 @@ module.exports = function(sequelize, DataTypes) {
             type: DataTypes.STRING,
             allowNull: true,
             validate: {
-                len: [1, 151]
+                len: [1, 801]
             }
         },
 
