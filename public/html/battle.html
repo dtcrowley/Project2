@@ -14,7 +14,6 @@
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
      crossorigin="anonymous">
-     <link rel="stylesheet" href="public/css/styles.css">
      <!-- Bootstrap Javascript -->
 	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
 	 crossorigin="anonymous"></script> -->
@@ -292,6 +291,7 @@
       // Loop through the characters object and call the renderCharacter function on each character to render their card.
       for (var key in characters) {
         renderCharacter(characters[key], "#characters-section");
+        $("#attack-button").hide();
       }
     };
   
@@ -375,6 +375,7 @@
     $("#available-to-attack-section").on("click", ".character", function() {
       // Saving the opponent's name.
       var name = $(this).attr("data-name");
+      $("#attack-button").show();
   
       // If there is no defender, the clicked enemy will become the defender.
       if ($("#defender").children().length === 0) {
@@ -429,6 +430,7 @@
             var attackMessage = "You attacked " + defender.pokename + " for " + attacker.Attack + " damage.";
             var counterAttackMessage = defender.pokename + " attacked you back for " + defender.Attack + " damage.";
             var gameStateMessage = "Enemy " + defender.pokename + " fainted! Choose your next opponent."; 
+            $("#attack-button").hide();
             renderMessage(attackMessage);
             renderMessage(gameStateMessage);
           
