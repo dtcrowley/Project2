@@ -1,15 +1,122 @@
-body, html {
-    /*background-image: url(http://eskipaper.com/images/pokemon-backgrounds-1.jpg);
+body.pokedex-page {
+    background-image: url(https://img00.deviantart.net/d852/i/2015/239/a/3/pokemon_xy_vs_background_by_lil_riku-d97f4y5.png);
     height: 100%;
+    
     background-position: center;
     background-repeat: no-repeat;
-    background-size: cover;*/
+    background-size: cover;
+    background-attachment: fixed;
+}
+body.battle-page {
+    background-image: url(https://img00.deviantart.net/d852/i/2015/239/a/3/pokemon_xy_vs_background_by_lil_riku-d97f4y5.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.jumbotron {
+    
+    /*background-image: url(http://www.desktopimages.org/pictures/2014/0404/1/pokemon-simple-background-pokeball-wallpaper-509856.jpg);*/
+    background-image: url(https://221b-dijon.com/wp-content/uploads/2017/11/Dessin-Anime%CC%81.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+     color: black;
+    position: relative;
+    top: 75px;
+    max-width: 100%;
+    height: auto;
     
 }
+#pokedex-jumbo h1 {
+    font-weight: bolder;
+    font-family: fantasy;
+    font-size: 90px;
+    background-color: rgb(234, 235, 236);
+    width: 350px;
+    position: relative;
+    left: 525px;
+}
+#battle-jumbo h1 {
+width: 470px;
+position: relative;
+left: 480px;
+background-color: rgb(234, 235, 236);
+font-weight: bolder;
+font-family: fantasy;
+font-size: 90px;
+
+}
+
+.pokeN {
+    float: left;
+    position: relative;
+    left: 240px;
+}
+#nameSearch {
+    clear: both;
+    position: relative;
+    top: 50px;
+    right: 180px;
+}
+.pokeT {
+    position: relative;
+    left: 560px;
+}
+#typeSearch {
+    position: relative;
+    left: -180px;
+    top: 50px;
+}
+
+
 .wrapper {
     margin: auto;
     width: 75%;
     padding-top: 100px;
+}
+
+/*#characters-section {
+    margin: auto;
+    width: 92%;
+}*/
+#available-to-attack-section {
+    margin: auto;
+    width: 92%;
+    position: relative;
+    bottom: 100px;
+}
+/*.battle-arena {
+    margin: auto;
+    width: 92%;
+    position: relative;
+    left: 50px;
+}*/
+.section-title2 {
+    position: relative;
+    bottom: 10px;
+    left: 50px;
+    font-weight: bold;
+}
+.section-title3 {
+    position: relative;
+    bottom: 10px;
+    left: 150px;
+    font-weight: bold;
+
+}
+#fight-section {
+    margin-bottom: 40px;
+    /*position: relative;
+    bottom: 40px;
+    left: 70px;*/
+}
+
+.section-title1 {
+    text-align: center;
+    width: 92%;
+    padding-bottom: 10px;
+    font-weight: bold;
 }
 
 ul {
@@ -20,11 +127,14 @@ ul {
     border: 1px;
     float: left;
     margin-bottom: 50px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    
 }
 .badge {
     width: 90px;
     position: relative;
     left: 20px;
+    border: black 2px;
 }
 
 .Grass {
@@ -93,9 +203,13 @@ ul {
 .Dragon {
     background-color: rosybrown;
 }
+.Dark {
+    background-color: rgb(49, 25, 25);
+    color: whitesmoke;
+}
 .pokemon {
-   background-color: tan;
-   opacity: 1;
+   background-color: rgb(234, 235, 236);
+   border: black 5px;
    
 }
 .jumbo-container {
@@ -111,9 +225,6 @@ padding-top: 20px;
     text-align: center;
    
 }
-.modal-title {
-    
-}
 
 .modal-body{
     color: white;
@@ -121,16 +232,7 @@ padding-top: 20px;
     position: relative;
     bottom: 12px;
 }
-.jumbotron {
-    
-    /*background-image: url(https://wallpapercave.com/wp/l1mDM6N.jpg);
-    color: whitesmoke;*/
-    position: relative;
-    top: 75px;
-    max-width: 100%;
-    height: auto;
-    
-}
+
 #pokeModal {
     position: fixed;
     top: 30%;
@@ -141,6 +243,7 @@ padding-top: 20px;
 }
 
 .modal-dialog {
+    clear: both;
     color: whitesmoke;
 }
 
@@ -154,7 +257,7 @@ padding-top: 20px;
     cursor: pointer;
     margin-right: 10px;
     margin-bottom: 10px;
-    background: tan;
+    background:  rgb(234, 235, 236);
   }
 
 .character-image {
@@ -216,3 +319,4 @@ padding-top: 20px;
     margin-left: 45.2%;
     margin-top: 20px;
 }
+

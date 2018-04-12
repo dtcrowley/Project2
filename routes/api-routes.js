@@ -24,6 +24,18 @@ module.exports = function (app) {
     })
   });
 
+  app.get("/pokemon/:Type_1", function (req, res) {
+    db.pokemonstats.findAll({
+      where: {
+        Type_1: req.params.Type_1
+      },
+      include: [db.images]
+    }).then(function (result) {
+      res.render('index', { pokemon: result });
+    });
+  });
+
+
 
 
   app.get('/api/pokemon/image', function (req, res) {

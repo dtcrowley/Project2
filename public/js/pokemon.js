@@ -34,6 +34,23 @@ console.log(name);
 });
 /////////////////////////////////////////////////////////////////////////////////////
 
+//search by type/////////////////////////////////////////////////////////////////////
+$('#typeSearch').on('click', function(event) {
+    event.preventDefault();
+
+var base = location.origin;
+console.log(base);
+var type = $('#inputType').val();
+console.log(type);
+console.log(base + '/' + type);
+ $.ajax({
+    url: base + '/pokemon/' + type, success: function (result) {
+        console.log(result);
+        $('body').html(result);
+    }
+});
+});
+////////////////////////////////////////////////////////////////////////////////////////
 
 
 
