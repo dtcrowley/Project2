@@ -168,10 +168,22 @@ padding-top: 20px;
     text-align: center;
 }
 
-.section-title {
+.section-title1 {
     font-size: 24px;
     font-weight: bold;
     text-align: center;
+}
+
+.section-title2 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 25px;
+}
+
+.section-title3 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-left: 68%;
 }
 
 #main-game-section {
@@ -211,6 +223,20 @@ padding-top: 20px;
 }
 
 .restart-button {
-    margin-left: 45.2%;
-    margin-top: 20px;
+    margin-left: 48%;
+    margin-bottom: 20px;
+}
+
+#main-game-section {
+    color: blue;
+    font-weight: bolder;
+}
+
+#game-message {
+    color: blue;
+    font-weight: bolder;
+}
+.resultMessage {
+    color: blue;
+    font-weight: bolder;
 }

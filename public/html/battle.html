@@ -14,7 +14,6 @@
 	<script src="https://code.jquery.com/jquery.js"></script>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
      crossorigin="anonymous">
-     <link rel="stylesheet" href="public/css/styles.css">
      <!-- Bootstrap Javascript -->
 	<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
 	 crossorigin="anonymous"></script> -->
@@ -41,35 +40,35 @@
 				<div class="jumbo-container">
 					<h1 class="display-4">PokeBattle!</h1>
                     <h3>Generation I</h3>
-                    <h5>Select the Pokemon you want to battle with, as well as your opponents'!</h5>
+                    <h5>Select your Pokemon, then choose and opponent!</h5>
 				</div>
 			</div>
 		</div>
 		<div>
-        <img src="https://wallpapertag.com/wallpaper/small/c/4/c/771103-pokemon-black-wallpaper-1920x1080-meizu.jpg#.Ws5npkOkp5o.link" style="position: fixed; top: 0px; left: 0px; width: 100%; height: 100%; z-index: -1">
+        <img src="https://wallpapertag.com/wallpaper/small/c/4/c/771103-pokemon-black-wallpaper-1920x1080-meizu.jpg#.Ws5npkOkp5o.link" style="position: fixed; top: 17%; left: 17%; width:66%; height: 66%; z-index: -1">
       <div id="main-game-section">
           <!-- Where the characters are initially available to be selected. -->
           <div id="characters-section">
-              <div class="section-title">Select Your Pokemon!</div>
+              <div class="section-title1">Select Your Pokemon!</div>
           </div>
           
           
 
           <!-- Where our enemies available to attack will appear. -->
           <div id="available-to-attack-section">
-              <div class="section-title">Enemy Pokemon Available To Attack</div>
+              <div class="section-title1">Enemy Pokemon Available For Battle</div>
           </div>
 
           <!-- Section for our selected character. -->
           <div id="selected-character-section">
-              <div class="section-title">Your Pokemon</div>
+              <div class="section-title2">Your Pokemon</div>
               <!-- Where our selected character will appear. -->
               <div id="selected-character"></div>
           </div>
 
           <div id="action">
               <div class="character-section">
-                  <div class="section-title">Defender</div>
+                  <div class="section-title3">Enemy Pokemon</div>
                   <!-- Where our defender will appear. -->
                   <div id="defender"></div>
               </div>
@@ -77,8 +76,7 @@
           
           <div class="section-title"></div>
           <div id="fight-section">
-              <button id="attack-button" style="margin-left: 100px;">Attack</button>
-              <hr>
+              <button id="attack-button" style="margin-left: 34%; margin-bottom: 20px;">Attack</button>
           </div>
       </div>
     </div>
@@ -109,14 +107,14 @@
         Type_2: "Poison",
         Total: 525,
         HP: 80,
-        Attack: 32,
+        Attack: 42,
         Defense: 83,
         Special_atk: 100,
         Special_def: 100,
         Speed: 80,
         Generation: 1,
         Legendary: false,
-        imageUrl: "/images/3.png"
+        imageUrl: "../images/0003.png"
         },
       "Charizard":{
         pokename: "Charizard",
@@ -124,14 +122,14 @@
         Type_2: "Flying",
         Total: 534,
         HP: 78,
-        Attack: 34,
+        Attack: 44,
         Defense: 78,
         Special_atk: 109,
         Special_def: 85,
         Speed: 100,
         Generation: 1,
         Legendary: false,
-        imageUrl: "/images/6.png"
+        imageUrl: "../images/0006.png"
         },
       "Blastoise": {
         id: 9,
@@ -140,14 +138,14 @@
         Type_2: "",
         Total: 530,
         HP: 79,
-        Attack: 33,
+        Attack: 38,
         Defense: 100,
         Special_atk: 85,
         Special_def: 105,
         Speed: 78,
         Generation: 1,
         Legendary: false,
-        imageUrl: "/images/9.png"
+        imageUrl: "../images/0009.png"
         },
       "Raichu": {
         id: 26,
@@ -163,7 +161,7 @@
         Speed: 110,
         Generation: 1,
         Legendary: false,
-        imageUrl: "/images/26.png"
+        imageUrl: "../images/0026.png"
         },
       "Nidoqueen": {
         id: 31,
@@ -179,7 +177,7 @@
         Speed: 76,
         Generation: 1,
         Legendary: false,
-        imageUrl: "/images/31.png"
+        imageUrl: "../images/0031.png"
         },
       "Dugtrio": {
         id: 51,
@@ -188,14 +186,14 @@
         Type_2: "",
         Total: 405,
         HP: 35,
-        Attack: 30,
+        Attack: 55,
         Defense: 50,
         Special_atk: 50,
         Special_def: 70,
         Speed: 120,
         Generation: 1,
         Legendary: false,
-        imageUrl: "/images/51.png"
+        imageUrl: "../images/0051.png"
         },
       "Alakazam": {
         id: 65,
@@ -211,7 +209,7 @@
         Speed: 120,
         Generation: 1,
         Legendary: false,
-        imageUrl: "/images/65.png"
+        imageUrl: "../images/0065.png"
         },
       "Gengar": {
         id: 94,
@@ -219,15 +217,15 @@
         Type_1: "Ghost",
         Type_2: "Poison",
         Total: 500,
-        HP: 60,
-        Attack: 35,
+        HP: 90,
+        Attack: 32,
         Defense: 60,
         Special_atk: 130,
         Special_def: 75,
         Speed: 110,
         Generation: 1,
         Legendary: false,
-        imageUrl: "/images/94.png"
+        imageUrl: "../images/0094.png"
         },
       "Hitmonchan": {
         id: 107,
@@ -243,7 +241,7 @@
         Speed: 76,
         Generation: 1,
         Legendary: false,
-        imageUrl: "/images/107.png"
+        imageUrl: "../images/0107.png"
         },
       "Aerodactyl": {
         id: 142,
@@ -251,7 +249,7 @@
         Type_1: "Rock",
         Type_2: "Flying",
         Total: 515,
-        HP: 80,
+        HP: 85,
         Attack: 55,
         Defense: 65,
         Special_atk: 60,
@@ -259,7 +257,7 @@
         Speed: 130,
         Generation: 1,
         Legendary: false,
-        imageUrl: "/images/142.png"
+        imageUrl: "../images/0142.png"
         }
     };
   
@@ -268,9 +266,7 @@
     // Populated with all the characters the player didn't select.
     var combatants = [];
     // Will be populated when the player chooses an opponent.
-    var defender;
-    // Will keep track of turns during combat. Used for calculating player damage.
-    var turnCounter = 1;
+    var defender;  
     // Tracks number of defeated opponents.
     var killCount = 0;
   
@@ -295,6 +291,7 @@
       // Loop through the characters object and call the renderCharacter function on each character to render their card.
       for (var key in characters) {
         renderCharacter(characters[key], "#characters-section");
+        $("#attack-button").hide();
       }
     };
   
@@ -333,7 +330,7 @@
 
   
       // Build div that will display the victory/defeat message.
-      var gameState = $("<div>").text(resultMessage);
+      var gameState = $("<div class=resultMessage>").text(resultMessage);
   
       // Render the restart button and victory/defeat message to the page.
       $("body").append(gameState);
@@ -378,6 +375,7 @@
     $("#available-to-attack-section").on("click", ".character", function() {
       // Saving the opponent's name.
       var name = $(this).attr("data-name");
+      $("#attack-button").show();
   
       // If there is no defender, the clicked enemy will become the defender.
       if ($("#defender").children().length === 0) {
@@ -422,9 +420,8 @@
           if (attacker.HP <= 0) {
             var attackMessage = "You attacked " + defender.pokename + " for " + attacker.Attack + " damage.";
             var counterAttackMessage = defender.pokename + " attacked you back for " + defender.Attack + " damage.";
-            clearMessage();
             restartGame("You have been defeated...GAME OVER!!!");
-            $("#attack-button").off("click");
+            $("#attack-button").hide();
           }
         }
         else {
@@ -432,7 +429,9 @@
           // Remove your opponent's character card.
             var attackMessage = "You attacked " + defender.pokename + " for " + attacker.Attack + " damage.";
             var counterAttackMessage = defender.pokename + " attacked you back for " + defender.Attack + " damage.";
-            var gameStateMessage = "Enemy " + defender.pokename + " fainted! Choose your next opponent.";
+            var gameStateMessage = "Enemy " + defender.pokename + " fainted! Choose your next opponent."; 
+            $("#attack-button").hide();
+            renderMessage(attackMessage);
             renderMessage(gameStateMessage);
           
             $("#defender").empty();
@@ -449,7 +448,6 @@
           }
         }
         // Increment turn counter. This is used for determining how much damage the player does.
-        turnCounter++;
       }
       else {
         // If there is no defender, render an error message.
