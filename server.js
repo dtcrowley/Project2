@@ -6,6 +6,7 @@ var path = require("path");
 var handlebars = require("handlebars");
 var exphbs = require("express-handlebars");
 var passport = require("./config/passport");
+var env = require('dotenv').load();
 
 var PORT = process.env.PORT || 5000;
 var db = require("./models");

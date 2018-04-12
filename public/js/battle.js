@@ -17,7 +17,7 @@ $(document).ready(function() {
         Speed: 80,
         Generation: 1,
         Legendary: false,
-        imageUrl: "/images/3.png"
+        imageUrl: "/images/0003.png"
         },
       "Charizard":{
         pokename: "Charizard",
@@ -32,7 +32,7 @@ $(document).ready(function() {
         Speed: 100,
         Generation: 1,
         Legendary: false,
-        imageUrl: "/images/6.png"
+        imageUrl: "/images/0006.png"
         },
       "Blastoise": {
         id: 9,
@@ -48,7 +48,7 @@ $(document).ready(function() {
         Speed: 78,
         Generation: 1,
         Legendary: false,
-        imageUrl: "/images/9.png"
+        imageUrl: "/images/0009.png"
         },
       "Raichu": {
         id: 26,
@@ -64,7 +64,7 @@ $(document).ready(function() {
         Speed: 110,
         Generation: 1,
         Legendary: false,
-        imageUrl: "/images/26.png"
+        imageUrl: "/images/0026.png"
         },
       "Nidoqueen": {
         id: 31,
@@ -80,7 +80,7 @@ $(document).ready(function() {
         Speed: 76,
         Generation: 1,
         Legendary: false,
-        imageUrl: "/images/31.png"
+        imageUrl: "/images/0031.png"
         },
       "Dugtrio": {
         id: 51,
@@ -96,7 +96,7 @@ $(document).ready(function() {
         Speed: 120,
         Generation: 1,
         Legendary: false,
-        imageUrl: "/images/51.png"
+        imageUrl: "/images/0051.png"
         },
       "Alakazam": {
         id: 65,
@@ -112,7 +112,7 @@ $(document).ready(function() {
         Speed: 120,
         Generation: 1,
         Legendary: false,
-        imageUrl: "/images/65.png"
+        imageUrl: "/images/0065.png"
         },
       "Gengar": {
         id: 94,
@@ -128,7 +128,7 @@ $(document).ready(function() {
         Speed: 110,
         Generation: 1,
         Legendary: false,
-        imageUrl: "/images/94.png"
+        imageUrl: "/images/0094.png"
         },
       "Hitmonchan": {
         id: 107,
@@ -144,7 +144,7 @@ $(document).ready(function() {
         Speed: 76,
         Generation: 1,
         Legendary: false,
-        imageUrl: "/images/107.png"
+        imageUrl: "/images/0107.png"
         },
       "Aerodactyl": {
         id: 142,
@@ -160,7 +160,7 @@ $(document).ready(function() {
         Speed: 130,
         Generation: 1,
         Legendary: false,
-        imageUrl: "/images/142.png"
+        imageUrl: "/images/0142.png"
         }
     };
   

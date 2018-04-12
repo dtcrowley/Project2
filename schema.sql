@@ -26,3 +26,14 @@ CREATE TABLE images (
     PRIMARY KEY (id),
     FOREIGN KEY(pokID) REFERENCES pokemonStats(id)
 );
+
+CREATE TABLE trainer (
+    id INTEGER (10) NOT NULL,
+    email VARCHAR (30) NOT NULL, 
+    password VARCHAR (10) NOT NULL,
+    trainerName VARCHAR (20) NOT NULL,
+    localGym VARCHAR (20) NOT NULL, 
+    background VARCHAR(240),
+    PRIMARY KEY (id)
+
+);
