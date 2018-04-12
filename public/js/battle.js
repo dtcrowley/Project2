@@ -10,7 +10,7 @@ $(document).ready(function() {
         Type_2: "Poison",
         Total: 525,
         HP: 80,
-        Attack: 32,
+        Attack: 82,
         Defense: 83,
         Special_atk: 100,
         Special_def: 100,
@@ -25,7 +25,7 @@ $(document).ready(function() {
         Type_2: "Flying",
         Total: 534,
         HP: 78,
-        Attack: 34,
+        Attack: 84,
         Defense: 78,
         Special_atk: 109,
         Special_def: 85,
@@ -41,7 +41,7 @@ $(document).ready(function() {
         Type_2: "",
         Total: 530,
         HP: 79,
-        Attack: 33,
+        Attack: 83,
         Defense: 100,
         Special_atk: 85,
         Special_def: 105,
@@ -57,7 +57,7 @@ $(document).ready(function() {
         Type_2: "",
         Total: 485,
         HP: 60,
-        Attack: 40,
+        Attack: 90,
         Defense: 55,
         Special_atk: 90,
         Special_def: 80,
@@ -73,7 +73,7 @@ $(document).ready(function() {
         Type_2: "Ground",
         Total: 505,
         HP: 90,
-        Attack: 42,
+        Attack: 92,
         Defense: 87,
         Special_atk: 75,
         Special_def: 85,
@@ -89,7 +89,7 @@ $(document).ready(function() {
         Type_2: "",
         Total: 405,
         HP: 35,
-        Attack: 30,
+        Attack: 80,
         Defense: 50,
         Special_atk: 50,
         Special_def: 70,
@@ -121,7 +121,7 @@ $(document).ready(function() {
         Type_2: "Poison",
         Total: 500,
         HP: 60,
-        Attack: 35,
+        Attack: 65,
         Defense: 60,
         Special_atk: 130,
         Special_def: 75,
@@ -137,7 +137,7 @@ $(document).ready(function() {
         Type_2: "",
         Total: 455,
         HP: 50,
-        Attack: 55,
+        Attack: 105,
         Defense: 79,
         Special_atk: 35,
         Special_def: 110,
@@ -153,7 +153,7 @@ $(document).ready(function() {
         Type_2: "Flying",
         Total: 515,
         HP: 80,
-        Attack: 55,
+        Attack: 105,
         Defense: 65,
         Special_atk: 60,
         Special_def: 75,
@@ -257,14 +257,13 @@ $(document).ready(function() {
       // If a player character has not yet been chosen...
       if (!attacker) {
         // We populate attacker with the selected character's information.
-        attacker = characters[name];
+        attacker = characters[pokename];
         // We then loop through the remaining characters and push them to the combatants array.
         for (var key in characters) {
           if (key !== name) {
             combatants.push(characters[key]);
           }
         }
-        console.log(attacker);
   
         // Hide the character select div.
         $("#characters-section").hide();

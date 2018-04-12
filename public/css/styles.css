@@ -99,9 +99,7 @@ ul {
    
 }
 .jumbo-container {
-   
     text-align: center;
-   
 }
 .top {
 padding-top: 20px;
@@ -122,8 +120,8 @@ padding-top: 20px;
     bottom: 12px;
 }
 .jumbotron {
-    /*background-size: inherit;
-    background-image: url(https://wallpapercave.com/wp/l1mDM6N.jpg);
+   /* background-size: cover;
+    background-image: url(http://eskipaper.com/images/pokemon-backgrounds-1.jpg);
     color: whitesmoke;*/
     position: relative;
     top: 75px;
@@ -140,11 +138,6 @@ padding-top: 20px;
 
 .modal-dialog {
     color: whitesmoke;
-}
-
-#characters-section {
-    margin-top: 100px;
-    margin-bottom: 20px;
 }
 
 .character {
@@ -240,3 +233,4 @@ padding-top: 20px;
     color: blue;
     font-weight: bolder;
 }
+
