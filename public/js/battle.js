@@ -321,7 +321,9 @@ $(document).ready(function() {
           var attackMessage = "You attacked " + defender.pokename + " for " + attacker.Attack + " damage.";
           var counterAttackMessage = defender.pokename + " attacked you back for " + defender.Attack + " damage.";
           $("#attack-button").hide();
-          restartGame("You have been defeated...GAME OVER!!!");
+          var restartMessage = "You have been defeated... GAME OVER!!!"
+          renderMessage(restartMessage);
+          restartGame();
           
         }
       }
