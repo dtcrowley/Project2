@@ -18,6 +18,32 @@ module.exports = function (app) {
       res.render('battle', { pokemon: result })
     });
   });
+  
+  app.get("/:pokeName", function (req, res) {
+    
+    db.pokemonstats.findAll({
+      where: {
+        pokeName: req.params.pokeName,
+        
+      },
+      include: [db.images]
+    }).then(function (result) {
+      res.render('index', { pokemon: result });
+    })
+  });
+
+
+  app.get("/pokemon/:Type_1", function (req, res) {
+    db.pokemonstats.findAll({
+      where: {
+        Type_1: req.params.Type_1
+      },
+      include: [db.images]
+    }).then(function (result) {
+      res.render('index', { pokemon: result });
+    });
+  });
+
 
   app.get('/api/pokemon/image', function (req, res) {
     db.images.findAll({}).then(function (result) {

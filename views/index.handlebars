@@ -12,17 +12,25 @@
 
 
 <div class="top">
-    <div class="jumbotron jumbotron-fluid">
+    <div class="jumbotron jumbotron-fluid" id="pokedex-jumbo">
         <div class="jumbo-container">
             <h1 class="display-4">Pokedex</h1>
-            <h3>Generation I</h3>
-            <form class="form-inline">
-                <div class="form-group mx-sm-3 mb-2">
-                    <label for="inputPassword2" class="sr-only"></label>
-                    <input type="text" class="form-control" id="inputName" placeholder="">
-                </div>
-                <button type="submit"  id = 'nameSearch' class="btn btn-primary mb-2">Search by Name</button>
-            </form>
+            <div class="searchForms">
+                <form class="form-inline pokeN">
+                    <div class="form-group mx-sm-3 mb-2">
+                        <label for="inputPassword2" class="sr-only"></label>
+                        <input type="text" class="form-control" id="inputName" placeholder="">
+                    </div>
+                    <button type="submit" id='nameSearch' class="btn btn-primary mb-2">Search by Name</button>
+                </form>
+                <form class="form-inline pokeT">
+                    <div class="form-group mx-sm-3 mb-2">
+                        <label for="inputPassword2" class="sr-only"></label>
+                        <input type="text" class="form-control" id="inputType" placeholder="">
+                    </div>
+                    <button type="submit" id='typeSearch' class="btn btn-primary mb-2">Search by Type</button>
+                </form>
+            </div>
             <p class="lead"></p>
         </div>
     </div>
@@ -59,8 +67,8 @@
         </div>
         <img class="materialboxed pokeI" width="200" src="">
         <div class="modal-body">
-        <div class="divider"></div>
-        
+            <div class="divider"></div>
+
         </div>
         <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
