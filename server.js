@@ -7,25 +7,11 @@ var handlebars = require("handlebars");
 var exphbs = require("express-handlebars");
 var passport = require("./config/passport");
 var env = require('dotenv').load();
-var mysql = require("mysql");
+
 
 var PORT = process.env.PORT || 5000;
 var db = require("./models");
 
-var connection;
-if(process.env.JAWSDB_URL) {
-  //Heroku deployment
-    connection = mysql.createConnection(process.env.JAWSDB_URL);
-} else {
-  //local host
-    connection = mysql.createConnection({
-        root: 5000,
-        host: "localhost",
-        user: "root",
-        password: "@g5Ms2488",
-        database: "vawh31xclw4l22tl",
-    });
-};
 
 var app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
