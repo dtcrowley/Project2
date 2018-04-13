@@ -1,7 +1,11 @@
 {
   "development": {
     "username": "root",
+<<<<<<< HEAD
     "password": "root",
+=======
+    "password": "@g5Ms2488",
+>>>>>>> 79e22c1052420cf8e52e5cdaf01243a34fdd0afa
     "database": "pokemon",
     "host": "localhost",
     "dialect": "mysql"
@@ -14,10 +18,14 @@
     "dialect": "mysql"
   },
   "production": {
+<<<<<<< HEAD
     "username": "root",
     "password": null,
     "database": "database_production",
     "host": "127.0.0.1",
+=======
+    "use_env_variable": "JAWSDB_URL",
+>>>>>>> 79e22c1052420cf8e52e5cdaf01243a34fdd0afa
     "dialect": "mysql"
   }
 }
