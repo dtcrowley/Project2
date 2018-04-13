@@ -8,7 +8,7 @@ var exphbs = require("express-handlebars");
 var passport = require("./config/passport");
 var env = require('dotenv').load();
 
-var PORT = process.env.PORT || 3306;
+var PORT = process.env.PORT || 5000;
 var db = require("./models");
 
 var app = express();
