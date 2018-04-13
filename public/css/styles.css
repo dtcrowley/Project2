@@ -214,7 +214,9 @@ ul {
    
 }
 .jumbo-container {
+   
     text-align: center;
+   
 }
 .top {
 padding-top: 20px;
@@ -231,18 +233,7 @@ padding-top: 20px;
     position: relative;
     bottom: 12px;
 }
-<<<<<<< HEAD
-.jumbotron {
-   /* background-size: cover;
-    background-image: url(http://eskipaper.com/images/pokemon-backgrounds-1.jpg);
-    color: whitesmoke;*/
-    position: relative;
-    top: 75px;
-    
-}
-=======
 
->>>>>>> 22e186e06d049b550674a6c8b524dc99d124cf3c
 #pokeModal {
     position: fixed;
     top: 30%;
@@ -255,6 +246,11 @@ padding-top: 20px;
 .modal-dialog {
     clear: both;
     color: whitesmoke;
+}
+
+#characters-section {
+    margin-top: 100px;
+    margin-bottom: 20px;
 }
 
 .character {
@@ -299,8 +295,6 @@ padding-top: 20px;
     margin-left: 100px;
 }
 
-<<<<<<< HEAD
-=======
 #selected-character-section {
     width: 100%;
     float: left;
@@ -359,5 +353,3 @@ padding-top: 20px;
     position: relative;
     right: 350px;
 }
-
->>>>>>> 22e186e06d049b550674a6c8b524dc99d124cf3c

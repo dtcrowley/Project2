@@ -41,40 +41,4 @@ module.exports = function (app) {
       res.json(PokeDb);
     })
   });
-<<<<<<< HEAD
-
-  // app.get("/:pokeName", function (req, res) {
-
-  //   db.pokemonstats.findAll({
-  //     where: {
-  //       pokeName: req.params.pokeName,
-  //     },
-  //     include: [db.images]
-  //   }).then(function (result) {
-  //     res.render('index', { pokemon: result });
-  //   })
-  // });
-
-  // app.get("/api/:id", function(req, res){
-  //   db.pokemonstats.findAll({
-  //     where: {
-  //       id: req.params.id
-  //     }
-  //   }).then(function(PokeDb){
-  //     res.json(PokeDb);
-  //   })
-  // });
-
-
-  // app.delete("/api/", function(req, res) {
-
-  // });
-
-
-  // app.put("/api/:anything", function(req, res) {
-
-  // });
 }
-=======
-}
->>>>>>> 2bc8a59906bbb2b168231f42c002879b915cb7bf

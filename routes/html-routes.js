@@ -1,22 +1,11 @@
+// Requiring path to so we can use relative routes to our HTML files
 var path = require("path");
-<<<<<<< HEAD
-=======
 var db = require("../models");
 // Requiring our custom middleware for checking if a user is logged in
 var isAuthenticated = require("../config/middleware/isAuthenticated");
->>>>>>> 2bc8a59906bbb2b168231f42c002879b915cb7bf
 
-var isAuthenticated = require("../config/middleware/isAuthenticated");
+module.exports = function (app) {
 
-<<<<<<< HEAD
-module.exports = function(app) {
-  
-  app.get("/", function(req, res) {
-    res.sendFile(path.join(__dirname, "../public/html/index.html"));
-  });
-
-  app.get("/login", function(req, res) {
-=======
   app.get("/", function (req, res) {
     db.pokemonstats.findAll({
       include: [db.images]
@@ -61,7 +50,6 @@ module.exports = function(app) {
 
   app.get("/login", function (req, res) {
     // If the user already has an account send them to the members page
->>>>>>> 2bc8a59906bbb2b168231f42c002879b915cb7bf
     if (req.user) {
       res.redirect("/members");
     }
