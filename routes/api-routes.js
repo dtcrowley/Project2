@@ -3,48 +3,6 @@ var passport = require("../config/passport");
 
 module.exports = function (app) {
 
-  app.get("/", function (req, res) {
-    db.pokemonstats.findAll({
-      include: [db.images]
-    }).then(function (result) {
-      res.render('index', { pokemon: result })
-    });
-  });
-
-  app.get("/battle", function (req, res) {
-    db.pokemonstats.findAll({
-      include: [db.images]
-    }).then(function (result) {
-      res.render('battle', { pokemon: result })
-    });
-  });
-  
-  app.get("/:pokeName", function (req, res) {
-    
-    db.pokemonstats.findAll({
-      where: {
-        pokeName: req.params.pokeName,
-        
-      },
-      include: [db.images]
-    }).then(function (result) {
-      res.render('index', { pokemon: result });
-    })
-  });
-
-
-  app.get("/pokemon/:Type_1", function (req, res) {
-    db.pokemonstats.findAll({
-      where: {
-        Type_1: req.params.Type_1
-      },
-      include: [db.images]
-    }).then(function (result) {
-      res.render('index', { pokemon: result });
-    });
-  });
-
-
   app.get('/api/pokemon/image', function (req, res) {
     db.images.findAll({}).then(function (result) {
       res.json(result)
@@ -62,7 +20,7 @@ module.exports = function (app) {
   });
 
   // Display data for all pokemon of a certain type
-  app.get("/api/pokemon/:Type_1", function (req, res) {
+  app.get("/api/type/:Type_1", function (req, res) {
     db.pokemonstats.findAll({
       where: {
         Type_1: req.params.Type_1
@@ -83,6 +41,7 @@ module.exports = function (app) {
       res.json(PokeDb);
     })
   });
+<<<<<<< HEAD
 
   // app.get("/:pokeName", function (req, res) {
 
@@ -116,3 +75,6 @@ module.exports = function (app) {
 
   // });
 }
+=======
+}
+>>>>>>> 2bc8a59906bbb2b168231f42c002879b915cb7bf
