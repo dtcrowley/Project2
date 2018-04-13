@@ -2,7 +2,7 @@
   "development": {
     "username": "root",
 
-    "password": "",
+    "password": "@g5Ms2488",
     "database": "pokemon",
     "host": "localhost",
     "dialect": "mysql"
