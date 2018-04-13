@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Passport Authentication</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.7/lumen/bootstrap.min.css">
+  <link href="../css/styles.css" rel="stylesheet">
+</head>
+
+<body>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+      </div>
+    </div>
+  </nav>
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 col-md-offset-3">
+        <h2>Create Your Trainer Profile</h2>
+        <form class="signup">
+          <div class="form-group">
+            <label for="exampleInputEmail1">Email address</label>
+            <input type="email" class="form-control" id="email-input" placeholder="Email">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Password</label>
+            <input type="password" class="form-control" id="password-input" placeholder="Password">
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput">Trainer Name</label>
+            <input type="text" class="form-control" id="trainerName-input" placeholder="Example input">
+          </div>
+          <div class="form-group">
+            <label for="formGroupExampleInput2">Local Pokemon Gym</label>
+            <input type="text" class="form-control" id="localGym-input" placeholder="Another input">
+          </div>
+          <div class="form-row align-items-center">
+            <div class="col-auto my-1">
+              <label class="mr-sm-2" for="inlineFormCustomSelect">Pokemon Type Preference:</label>
+              <select class="custom-select mr-sm-2" id="pokeType">
+                <option selected>Select Type...</option>
+                <option value="1">Normal</option>
+                <option value="2">Fighting</option>
+                <option value="3">Flying</option>
+                <option value="4">Poison</option>
+                <option value="5">Ground</option>
+                <option value="6">Rock</option>
+                <option value="7">Bug</option>
+                <option value="8">Ghost</option>
+                <option value="9">Steel</option>
+                <option value="10">Fire</option>
+                <option value="11">Water</option>
+                <option value="12">Grass</option>
+                <option value="13">Electric</option>
+                <option value="14">Psychic</option>
+                <option value="15">Ice</option>
+                <option value="16">Dragon</option>
+                <option value="17">Dark</option>
+                <option value="18">Fairy</option>
+                <option value="19">???</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1">Trainer background</label>
+            <textarea class="form-control" id="background-input" rows="3"></textarea>
+          </div>
+          <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+            <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+            <span class="sr-only">Error:</span>
+            <span class="msg"></span>
+          </div>
+          <button type="submit" class="btn btn-primary">Sign Up</button>
+        </form>
+        <br />
+        <p>If already a member log in <a href="login">here</a></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript" src="js/signup.js"></script>
+
+</body>
+
+</html>

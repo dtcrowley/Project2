@@ -1,0 +1,105 @@
+<nav id="navbar-example2" class="navbar fixed-top navbar-light bg-dark ">
+    <a class="navbar-brand text-white" href="#"></a>
+    <ul class="nav nav-pills">
+        <li class="nav-item">
+            <a class="nav-link text-white" href="login">Log In</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-white" href="signup">Sign Up</a>
+        </li>
+    </ul>
+</nav>
+
+
+<div class="top">
+    <div class="jumbotron jumbotron-fluid" id="pokedex-jumbo">
+        <div class="jumbo-container">
+            <h1 class="display-4">Pokedex</h1>
+            <h3>Generation I</h3>
+            <form class="form-inline">
+                <div class="form-group mx-sm-3 mb-2">
+                    <label for="inputPassword2" class="sr-only"></label>
+                    <input type="password" class="form-control" id="inputPassword2" placeholder="">
+                </div>
+                <button type="submit" class="btn btn-primary mb-2">Search Pokedex</button>
+            </form>
+            <div class="searchForms">
+                <form class="form-inline pokeN">
+                    <div class="form-group mx-sm-3 mb-2">
+                        <label for="inputPassword2" class="sr-only"></label>
+                        <input type="text" class="form-control" id="inputName" placeholder="">
+                    </div>
+                    <button type="submit" id='nameSearch' class="btn btn-primary mb-2">Search by Name</button>
+                </form>
+                <form class="form-inline pokeT">
+                    <div class="form-group mx-sm-3 mb-2">
+                        <label for="inputPassword2" class="sr-only"></label>
+                        <input type="text" class="form-control" id="inputType" placeholder="">
+                    </div>
+                    <button type="submit" id='typeSearch' class="btn btn-primary mb-2">Search by Type</button>
+                </form>
+            </div>
+            <p class="lead"></p>
+        </div>
+    </div>
+</div>
+
+<div class="wrapper">
+    <ul id="pokedex">
+        {{#each pokemon}}
+        <li>
+            <div class="pokeHolder">
+                <figure>
+                    <h5> #{{id}} {{pokeName}}</h5>
+                    <button class="pokemon" data-id="{{pokeName}}" data-toggle="modal" data-target="#pokeModal">
+                        {{#each images}}
+                        <img src=".{{img}}" alt="pokemon"> {{/each}}
+                    </button>
+                </figure>
+
+                <div class="info">
+                    <span class="badge {{Type_1}}">{{Type_1}}</span>
+                    <span class="badge {{Type_2}}">{{Type_2}}</span>
+                </div>
+            </div>
+
+        </li>
+        {{/each}}
+
+    </ul>
+</div>
+<div id="pokeModal" class="modal fade" role="dialog" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-header">
+            <h5 class="modal-title"></h5>
+        </div>
+        <img class="materialboxed pokeI" width="200" src="">
+        <div class="modal-body">
+            <div class="divider"></div>
+
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        </div>
+    </div>
+</div>
+
+<div id="loginModal" class="modal fade" role="dialog" style="display: none;">
+    <div class="modal-dialog">
+        <h4>Login</h4>
+        <div class="divider"></div>
+        <form>
+            <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+            </div>
+            <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+            </div>
+            <div class="modal-footer">
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </form>
